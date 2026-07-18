@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Cherry Pie 758 - Portfolio</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+}
+
+nav,
+h1,
+h2,
+p,
+.box,
+.banner,
+.avatar,
+footer {
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+.box a {
+
+    color:#ff99ee;
+
+    text-decoration:none;
+
+    text-shadow:
+    0 0 10px #ff00ff;
+
+}
+
+
+.box a:hover {
+
+    color:white;
+
+}
+
+* {
+
+    box-sizing:border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+
+body {
+
+
+    margin:0;
+
+
+    background-image:url("pink_background.png");
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    background-attachment:fixed;
+
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+
+    font-family:"Press Start 2P", Arial, sans-serif;
+
+
+    overflow-x:hidden;
+
+
+    padding-bottom:50px;
+
+
+}
+
+
+
+
+/* effet écran pixel */
+
+
+body::after {
+
+
+    content:"";
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:
+
+    repeating-linear-gradient(
+
+    0deg,
+
+    rgba(255,255,255,0.03),
+
+    rgba(255,255,255,0.03) 1px,
+
+    transparent 1px,
+
+    transparent 3px
+
+    );
+
+
+    pointer-events:none;
+
+
+    z-index:20;
+
+
+}
+
+
+
+
+
+
+/* navigation */
+
+
+nav {
+
+
+    padding:25px;
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+}
+
+
+
+nav a {
+
+
+    color:#ff99ee;
+
+
+    text-decoration:none;
+
+
+    margin:10px;
+
+
+    text-shadow:
+
+    0 0 10px #ff00ff;
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+
+nav a:hover {
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+/* titres */
+
+
+h1 {
+
+
+    color:#ff00ff;
+
+
+    font-size:38px;
+
+
+    text-shadow:
+
+
+    0 0 10px #ff00ff,
+
+    0 0 25px #ff00ff;
+
+
+}
+
+
+
+
+h2 {
+
+
+    color:#ff66dd;
+
+
+    font-size:18px;
+
+
+    text-shadow:
+
+
+    -2px -2px white,
+
+     2px -2px white,
+
+    -2px  2px white,
+
+     2px  2px white,
+
+
+     0 0 20px #ff00ff;
+
+
+}
+
+
+
+
+
+p {
+
+
+    font-size:11px;
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+
+
+
+/* bannière */
+
+
+.banner {
+
+
+    width:100vw;
+
+
+    height:260px;
+
+
+    object-fit:cover;
+
+
+    display:block;
+
+
+
+    margin-top:-80px;
+
+
+
+    mask-image:
+
+    linear-gradient(
+
+    to bottom,
+
+    black 70%,
+
+    transparent 100%
+
+    );
+
+
+}
+
+
+
+
+
+
+
+/* avatar */
+
+
+.avatar {
+
+
+    width:160px;
+
+
+    height:160px;
+
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+
+    border:5px solid white;
+
+
+
+
+    box-shadow:
+
+
+    0 0 10px white,
+
+
+    0 0 30px #ff00ff,
+
+
+    0 0 60px #ff00ff;
+
+
+
+
+    margin-top:-75px;
+
+
+
+    position:relative;
+
+
+    z-index:3;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* image du jeu */
+
+
+.project-image {
+
+
+    width:90%;
+
+
+    max-width:550px;
+
+
+
+    border-radius:20px;
+
+
+
+    border:3px solid white;
+
+
+
+
+    box-shadow:
+
+
+    0 0 10px white,
+
+
+    0 0 30px #ff00ff,
+
+
+    0 0 60px #ff00ff;
+
+
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+
+.project-image:hover {
+
+
+    transform:scale(1.04);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* cartes */
+
+
+.box {
+
+
+    background:
+
+    rgba(0,0,0,0.75);
+
+
+
+    border:3px solid white;
+
+
+
+    border-radius:20px;
+
+
+
+    padding:22px;
+
+
+
+    width:90%;
+
+
+    max-width:700px;
+
+
+
+    margin:25px auto;
+
+
+
+
+    box-shadow:
+
+
+    0 0 10px white,
+
+
+    0 0 30px #ff00ff;
+
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+
+
+.box:hover {
+
+
+    transform:translateY(-5px);
+
+
+
+    box-shadow:
+
+
+    0 0 15px white,
+
+
+    0 0 45px #ff00ff;
+
+
+
+}
+
+
+
+
+
+
+
+/* grille */
+
+
+.grid {
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    flex-wrap:wrap;
+
+
+    gap:25px;
+
+
+    width:90%;
+
+
+    max-width:1000px;
+
+
+    margin:auto;
+
+
+}
+
+
+
+.grid .box {
+
+
+    width:420px;
+
+
+    margin:0;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* boutons */
+
+
+.button {
+
+
+    display:inline-block;
+
+
+
+    padding:15px;
+
+
+
+    border:2px solid white;
+
+
+
+    border-radius:15px;
+
+
+
+    color:#ff99ee;
+
+
+
+    text-decoration:none;
+
+
+
+    box-shadow:
+
+
+    0 0 15px #ff00ff;
+
+
+}
+
+
+
+.button:hover {
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+footer {
+
+
+    margin-top:70px;
+
+
+    color:#ff99ee;
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<a href="#">HOME</a>
+
+<a href="#about">ABOUT</a>
+
+<a href="#games">GAMES</a>
+
+<a href="#contact">CONTACT</a>
+
+</nav>
+
+
+
+
+
+<img class="banner" src="banner.png" alt="Banner">
+
+
+
+<img class="avatar" src="tomie.png" alt="Profile Picture">
+
+
+
+
+
+<h1>
+CHERRY_PIE758 ♡
+</h1>
+
+
+
+<p>
+Indie Visual Novel Developer
+</p>
+
+
+
+<p>
+Creating cute games, strange worlds & emotional stories ✨
+</p>
+
+
+
+
+
+
+
+
+<!-- CREATOR PROFILE -->
+
+
+<div class="box">
+
+
+<h2>CREATOR PROFILE</h2>
+
+
+<p>
+
+
+🍒 Username:
+
+<br>
+
+cherry_pie758
+
+
+<br><br>
+
+
+🎭 Role:
+
+<br>
+
+Indie Visual Novel Creator
+
+
+<br><br>
+
+
+🌸 Style:
+
+<br>
+
+Cute • Emotional • Mysterious
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- CURRENT PROJECT -->
+
+
+<div class="box">
+
+
+<h2>CURRENT PROJECT</h2>
+
+
+
+<img class="project-image" src="project01.png" alt="Lili">
+
+
+
+<p>
+
+
+🌸 <b>Lili</b>
+
+
+<br><br>
+
+
+A story-driven visual novel currently in development.
+
+
+<br><br>
+
+
+📖 Engine:
+
+<br>
+
+Ren'Py
+
+
+<br><br>
+
+
+✨ Status:
+
+<br>
+
+Writing • Programming • Development
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ABOUT -->
+
+
+<div class="box" id="about">
+
+
+<h2>ABOUT ME</h2>
+
+
+<p>
+
+
+I'm a beginner indie developer passionate about
+visual novels, storytelling and emotional experiences.
+
+
+<br><br>
+
+
+I create stories focused on characters,
+atmospheres and memorable moments.
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- DOUBLE COLUMN SECTION -->
+
+
+<div class="grid">
+
+
+
+
+
+
+<div class="box">
+
+
+<h2>MY FOCUS</h2>
+
+
+<p>
+
+
+📖 Visual Novels
+
+
+<br><br>
+
+
+🎭 Character Design
+
+
+<br><br>
+
+
+✍️ Storytelling
+
+
+<br><br>
+
+
+🌙 Atmospheric Worlds
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h2>SKILLS</h2>
+
+
+<p>
+
+
+🎮 Visual Novel Development
+
+
+<br><br>
+
+
+💻 Ren'Py Programming
+
+
+<br><br>
+
+
+🎨 Digital Art
+
+
+<br><br>
+
+
+✍️ Writing
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h2>CURRENTLY LEARNING</h2>
+
+
+<p>
+
+
+🎮 Game Design
+
+
+<br><br>
+
+
+🖌️ Digital Illustration
+
+
+<br><br>
+
+
+🎵 Game Audio
+
+
+<br><br>
+
+
+💻 Programming
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="box">
+
+
+<h2>MY TOOLS</h2>
+
+
+<p>
+
+
+📖 Ren'Py
+
+
+<br><br>
+
+
+💻 Visual Studio Code
+
+
+<br><br>
+
+
+🎨 Photopea
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- GAMES -->
+
+
+<div class="box" id="games">
+
+
+<h2>MY GAMES</h2>
+
+
+<p>
+
+
+🌸 Lili
+
+
+<br><br>
+
+
+Status:
+
+<br>
+
+In Development
+
+
+<br><br>
+
+
+✨ More projects coming in the future...
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
+<div class="box" id="contact">
+
+<h2>CONTACT</h2>
+
+<p>
+
+🍒 itch.io
+
+<br>
+
+<a href="https://cherry-pie758.itch.io/" target="_blank">
+https://cherry-pie758.itch.io/
+</a>
+
+<br><br>
+
+
+💻 GitHub
+
+<br>
+
+<a href="https://github.com/cherrypie758" target="_blank">
+https://github.com/cherrypie758
+</a>
+
+
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+<footer>
+
+
+♡ Thanks for visiting my little corner ♡
+
+
+<br><br>
+
+
+— cherry_pie758
+
+
+</footer>
+
+
+
+
+
+</body>
+
+
+</html>
